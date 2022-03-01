@@ -1,10 +1,25 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="specifications")
 public class Specifications {
+	@Id
+	@GeneratedValue
+	@Column(name = "ID")
 	private int id;
+	@Column(name = "HP")
 	private int horsepower;
+	@Column(name = "TORQUE")
 	private int torque;
+	@Column(name = "DISPLACENET")
 	private double displacement;
+	@Column(name = "MPG")
 	private int milesPerGalon;
 	
 	public int getId() {
