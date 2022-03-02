@@ -20,7 +20,7 @@ public class Specifications {
 	@Column(name = "DISPLACENET")
 	private double displacement;
 	@Column(name = "MPG")
-	private int milesPerGalon;
+	private int milesPerGallon;
 	
 	public int getId() {
 		return id;
@@ -43,11 +43,11 @@ public class Specifications {
 	public void setDisplacement(double displacement) {
 		this.displacement = displacement;
 	}
-	public int getMilesPerGalon() {
-		return milesPerGalon;
+	public int getMilesPerGallon() {
+		return milesPerGallon;
 	}
-	public void setMilesPerGalon(int milesPerGalon) {
-		this.milesPerGalon = milesPerGalon;
+	public void setMilesPerGallon(int milesPerGallon) {
+		this.milesPerGallon = milesPerGallon;
 	}
 	
 	

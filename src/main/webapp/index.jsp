@@ -8,12 +8,14 @@
 <title>Garage Manager</title>
 </head>
 <body>
-	<h1>Welcome to Garage Manager</h1>
-	<p>This program stores information on the owners of different garages, their  cars, and the performance specifications for each car</p>
-	<h3>Make a Selection Below: </h3><br />
-	<input type = "submit" value = "Add New Owner" name = "selection">
-	<input type = "submit" value = "Display Garage Owners" name = "selection">
-	<input type = "submit" value = "Add New Cars" name = "selection">
-
+lll
+	<form method = "post" action = "navServlet">
+		<h1>Welcome to Garage Manager</h1>
+		<p>This program stores information on the owners of different garages, their  cars, and the performance specifications for each car</p>
+		<h3>Make a Selection Below: </h3><br />
+		<input type = "submit" value = "Add New Owner" name = "selection">
+		<input type = "submit" value = "Display Garage Owners" name = "selection">
+		<input type = "submit" value = "Add New Cars" name = "selection">
+	</form>
 </body>
 </html>
