@@ -1,11 +1,26 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="specifications")
 public class Specifications {
+	@Id
+	@GeneratedValue
+	@Column(name = "ID")
 	private int id;
+	@Column(name = "HP")
 	private int horsepower;
+	@Column(name = "TORQUE")
 	private int torque;
+	@Column(name = "DISPLACENET")
 	private double displacement;
-	private int milesPerGalon;
+	@Column(name = "MPG")
+	private int milesPerGallon;
 	
 	public int getId() {
 		return id;
@@ -28,11 +43,11 @@ public class Specifications {
 	public void setDisplacement(double displacement) {
 		this.displacement = displacement;
 	}
-	public int getMilesPerGalon() {
-		return milesPerGalon;
+	public int getMilesPerGallon() {
+		return milesPerGallon;
 	}
-	public void setMilesPerGalon(int milesPerGalon) {
-		this.milesPerGalon = milesPerGalon;
+	public void setMilesPerGallon(int milesPerGallon) {
+		this.milesPerGallon = milesPerGallon;
 	}
 	
 	

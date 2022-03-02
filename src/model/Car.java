@@ -1,9 +1,23 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cars")
 public class Car {
+	@Id
+	@GeneratedValue
+	@Column(name = "ID")
 	private int id;
+	@Column(name = "OWNER")
 	private Owner Owner;
+	@Column(name = "MODEL")
 	private String model;
+	@Column(name = "MANUFACTURER")
 	private String manufacturer;
 	
 	public int getId() {
