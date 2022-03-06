@@ -11,7 +11,7 @@
 	<h1> Add A New Garage Owner</h1>
 	
 	<form action = "addOwnerServlet" method = "post">
-	Owner Name: <input type = "text" name = "owner">
+	Garage Owner Name: <input type = "text" name = "owner"> <br />
 	
 	Add Cars to Garage: <br />
 	 
@@ -23,7 +23,13 @@
 	<br />
 	<input type = "submit" value = "Add Owner">
 	</form>
-	<a href = "index.html"> Return to Home Page</a>
+	
+	<form method = "post" action = "navServlet">
+		<h4>Navigation: </h4><br />
+		<input type = "submit" value = "Home Page" name = "selection">
+		<input type = "submit" value = "Display Garage Owners" name = "selection">
+		<input type = "submit" value = "Add New Cars" name = "selection">
+	</form>
 	
 </body>
 </html>
