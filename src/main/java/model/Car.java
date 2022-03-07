@@ -50,6 +50,12 @@ public class Car {
 	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
+	public Specifications getSpecs() {
+		return specs;
+	}
+	public void setSpecs(Specifications specs) {
+		this.specs = specs;
+	}
 	
 	
 }
