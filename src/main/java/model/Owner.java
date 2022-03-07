@@ -8,23 +8,38 @@ import javax.persistence.*;
 @Table(name="owners")
 public class Owner {
 	@Id
-	@GeneratedValue
-	@Column(name = "ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name = "NAME")
-	private String ownerName;
-	@JoinColumn(name = "oc_fk", )
+	@ManyToOne (cascade=CascadeType.PERSIST)
+	private OwnerName ownerName;
 	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
+	@JoinTable
 	private List<Car> cars;
+	
+	public Owner() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Owner(OwnerName ownerName, List<Car> cars) {
+		super();
+		this.ownerName = ownerName;
+		this.cars = cars;
+	}
 	
 	public int getId() {
 		return id;
 	}
-	public String getOwnerName() {
+	public OwnerName getOwnerName() {
 		return ownerName;
 	}
-	public void setOwnerName(String ownerName) {
+	public void setOwnerName(OwnerName ownerName) {
 		this.ownerName = ownerName;
+	}
+	public List<Car> getCars() {
+		return cars;
+	}
+	public void setCars(List<Car> cars) {
+		this.cars = cars;
 	}
 	
 	

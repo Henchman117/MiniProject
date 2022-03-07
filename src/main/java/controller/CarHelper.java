@@ -32,5 +32,12 @@ public class CarHelper {
 		List<Car> cars = e.createQuery("SELECT c FROM Car c").getResultList();
 		return cars;
 	}
+	public Car searchForCarId(int idToEdit) {
+		EntityManager em = emf.createEntityManager(); 
+		em.getTransaction().begin();
+		Car found = em.find(Car.class, idToEdit);
+		em.close();
+		return found;
+	}
 	
 }

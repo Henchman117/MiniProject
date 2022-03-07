@@ -11,7 +11,7 @@
 	<h1> Add A New Garage Owner</h1>
 	
 	<form action = "addOwnerServlet" method = "post">
-	Owner Name: <input type = "text" name = "owner">
+	Owner Name: <input type = "text" name = "ownerName">
 	
 	Add Cars to Garage: <br />
 	 
