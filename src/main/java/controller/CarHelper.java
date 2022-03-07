@@ -1,4 +1,4 @@
-package controller;
+package main.java.controller;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import model.Car;
+import main.java.model.Car;
 
 /**
  * @author Owen Miner - osminer
@@ -16,6 +16,10 @@ import model.Car;
 public class CarHelper {
 	static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MiniProject");
 	
+	public CarHelper() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public void addCar(Car c) {
 		EntityManager e = emf.createEntityManager();
 		e.getTransaction().begin();
@@ -25,7 +29,7 @@ public class CarHelper {
 	}
 	public List<Car> displayCars() {
 		EntityManager e = emf.createEntityManager();
-		List<Car> cars = e.createQuery("SELECT c FROM Car C").getResultList();
+		List<Car> cars = e.createQuery("SELECT c FROM Car c").getResultList();
 		return cars;
 	}
 	

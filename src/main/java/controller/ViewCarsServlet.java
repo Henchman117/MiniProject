@@ -1,4 +1,4 @@
-package controller;
+package main.java.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AddCarsServlet
+ * Servlet implementation class ViewCarsServlet
  */
-@WebServlet("/addCarsServlet")
-public class AddCarsServlet extends HttpServlet {
+@WebServlet("/viewCarsServlet")
+public class ViewCarsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddCarsServlet() {
+    public ViewCarsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +27,17 @@ public class AddCarsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		CarHelper ch = new CarHelper();
+		
+		request.setAttribute("allcars", ch.displayCars());
+		
+		String path = "/addOwner.jsp";
+		
+		if(ch.displayCars().isEmpty()) {
+			path = "/index.jsp";
+		}
+		
+		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
 
 	/**

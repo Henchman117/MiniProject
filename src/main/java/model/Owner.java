@@ -1,10 +1,8 @@
-package model;
+package main.java.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.util.List;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="owners")
@@ -15,6 +13,9 @@ public class Owner {
 	private int id;
 	@Column(name = "NAME")
 	private String ownerName;
+	@JoinColumn(name = "oc_fk", )
+	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
+	private List<Car> cars;
 	
 	public int getId() {
 		return id;

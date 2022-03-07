@@ -15,15 +15,15 @@
 	
 	Add Cars to Garage: <br />
 	 
-	<select name="allcars" multiple size="6">
-	<c:forEach items="${requestScope.allcars}" var="Car">
-		<option value = "${Car.id}">${Car.manufacturer} | ${Car.model}</option>
-	</c:forEach>
+	<select name = "allCars" multiple size = "10">
+		<c:forEach items = "${requestScope.cars}" var = "car">
+			<option value = "${car.id}"> ${car.manufacturer} ${car.model}</option>
+		</c:forEach>
 	</select>
 	<br />
 	<input type = "submit" value = "Add Owner">
 	</form>
-	<a href = "/MiniProject/index.jsp"> Return to Home Page</a>
+	<a href = "index.html"> Return to Home Page</a>
 	
 </body>
 </html>

@@ -1,4 +1,4 @@
-package controller;
+package main.java.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -38,7 +38,7 @@ public class NavServlet extends HttpServlet {
 		
 		if (selection.equals("Add New Owner")) {
 			
-			getServletContext().getRequestDispatcher("/addOwner.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/viewCarsServlet").forward(request, response);
 			
 		}else if (selection.equals("Display Garage Owners")) {
 			

@@ -1,4 +1,4 @@
-package model;
+package main.java.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,17 +11,27 @@ import javax.persistence.Table;
 public class Specifications {
 	@Id
 	@GeneratedValue
-	@Column(name = "ID")
 	private int id;
-	@Column(name = "HP")
 	private int horsepower;
-	@Column(name = "TORQUE")
 	private int torque;
-	@Column(name = "DISPLACENET")
 	private double displacement;
-	@Column(name = "MPG")
 	private int milesPerGallon;
 	
+	public Specifications() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public Specifications(int horsepower, int torque, double displacement, int milesPerGallon) {
+		super();
+		this.horsepower = horsepower;
+		this.torque = torque;
+		this.displacement = displacement;
+		this.milesPerGallon = milesPerGallon;
+	}
+
+
 	public int getId() {
 		return id;
 	}
