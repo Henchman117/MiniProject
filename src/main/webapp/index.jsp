@@ -23,7 +23,7 @@
 <body>
 <div id = "container">
 	<form method = "post" action = "/MiniProject/navServlet">
-		<h1>Welcome to Garage Manager</h1>
+		<h1 style = "color: rgb(45, 53, 66); background-color: rgb(207, 224, 250);">Welcome to Garage Manager</h1>
 		<p style = "background-color: rgb(160, 188, 232);" >This program stores information on the owners of different garages, their  cars, and the performance specifications for each car</p>
 		<h3 style = "background-color: rgb(201, 205, 212);">Make a Selection Below: </h3><br />
 		<input type = "submit" value = "Add New Owner" name = "selection" style = "background-color: rgb(196, 220, 255);">
