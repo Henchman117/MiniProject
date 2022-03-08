@@ -5,8 +5,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 import main.java.model.Car;
+import main.java.model.Specifications;
 
 /**
  * @author Owen Miner - osminer
@@ -39,5 +41,4 @@ public class CarHelper {
 		em.close();
 		return found;
 	}
-	
 }

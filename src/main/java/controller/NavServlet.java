@@ -43,7 +43,11 @@ public class NavServlet extends HttpServlet {
 		}else if (selection.equals("Display Garage Owners")) {
 			
 			getServletContext().getRequestDispatcher("/displayOwnersServlet").forward(request, response);
-		}else if (selection.equals("Add New Cars")){
+		}else if (selection.equals("Home Page")) {
+			
+			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		}
+		else if (selection.equals("Add New Cars")){
 			
 			getServletContext().getRequestDispatcher("/addCars.jsp").forward(request, response);
 		}

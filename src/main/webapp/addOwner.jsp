@@ -37,8 +37,32 @@
 	</c:forEach>
 	</select>
 	<br />
-	<input type = "submit" value = "Add Owner">
+	<input type = "submit" value = "Add Owner" name = "selection">
+	<input type = "submit" value = "Edit Car" name = "selection">
 	</form>
+	
+	<!-- Edit -->
+	<form method = "post" action="addOwnerServlet">
+	
+	<table>
+
+		<c:forEach items="${requestScope.allcars}" var="specs">
+		<tr>
+			<td><input type="radio" name="id" value="${specs.id}"></td>
+			<td>${specs.model}</td>
+			<td>${specs.manufacturer}</td>
+			<td>Horsepower: ${specs.specs.horsepower}</td>
+			<td>Torque: ${specs.specs.torque}</td>
+			<td>Displacement: ${specs.specs.displacement}</td>
+			<td>MPG: ${specs.specs.milesPerGallon}</td>
+		</tr>
+		</c:forEach>
+		
+	</table>
+	
+		<input type = "submit" value = "Edit Car" name = "selection">
+	</form>
+	
 	<form method = "post" action = "navServlet">
 		<h4 style = "background-color: rgb(201, 205, 212);">Navigation: </h4><br />
 		<input type = "submit" value = "Home Page" name = "selection" style = "background-color: rgb(196, 220, 255);">
