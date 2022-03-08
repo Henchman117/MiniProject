@@ -27,7 +27,7 @@
 	<h1 style = "color: rgb(45, 53, 66); background-color: rgb(207, 224, 250);"> Add A New Garage Owner</h1>
 	
 	<form action = "addOwnerServlet" method = "post">
-	Owner Name: <input type = "text" name = "ownerName">
+	Garage Owner Name: <input type = "text" name = "ownerName">
 	
 	<h3 style = "background-color: rgb(160, 188, 232);"> Add Cars to Garage: </h3>
 	 
