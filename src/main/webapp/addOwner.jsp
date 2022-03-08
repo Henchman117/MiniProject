@@ -45,6 +45,7 @@
 		<input type = "submit" value = "Display Garage Owners" name = "selection" style = "background-color: rgb(196, 220, 255);">
 		<input type = "submit" value = "Add New Cars" name = "selection" style = "background-color: rgb(196, 220, 255);">
 	</form>
+	<a href="index.jsp">Home</a>
 	</div>
 </body>
 </html>
